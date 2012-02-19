@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F5F27690-9A05-4678-AF29-86E4082C370B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MvcArch.Tests</RootNamespace>
+    <AssemblyName>MvcArch.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=2.0.0.232, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework.Patterns">
+      <HintPath>..\packages\EntityFramework.Patterns.0.5\lib\net40\EntityFramework.Patterns.dll</HintPath>
+    </Reference>
+    <Reference Include="Moq">
+      <HintPath>..\packages\Moq.4.0.10827\lib\NET40\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.5.10.11092\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.mocks">
+      <HintPath>..\packages\NUnit.2.5.10.11092\lib\nunit.mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="pnunit.framework">
+      <HintPath>..\packages\NUnit.2.5.10.11092\lib\pnunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Domain\EmployeeDomainTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\EmployeeServiceTests.cs" />
+    <Compile Include="Views\EmployeeView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MvcArch.Core\MvcArch.Core.csproj">
+      <Project>{38B2548A-7093-4654-95B0-472F3D2A9AC0}</Project>
+      <Name>MvcArch.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MvcArch.Dal\MvcArch.Dal.csproj">
+      <Project>{1F6E0422-F5C3-4F51-9A3B-5366267A92D0}</Project>
+      <Name>MvcArch.Dal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MvcArch.Domain\MvcArch.Domain.csproj">
+      <Project>{7021ED96-465F-48DA-8E7C-4BCAE03E79FA}</Project>
+      <Name>MvcArch.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MvcArch.IServices\MvcArch.IServices.csproj">
+      <Project>{320A5E90-D6B8-4464-B962-C811853F3A24}</Project>
+      <Name>MvcArch.IServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MvcArch.Services\MvcArch.Services.csproj">
+      <Project>{60C8629E-A846-4BEB-94AE-A35DD91CFCD6}</Project>
+      <Name>MvcArch.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MvcArch.Web\MvcArch.Web.csproj">
+      <Project>{0F04F903-9A46-4E22-A462-F430EBC0D746}</Project>
+      <Name>MvcArch.Web</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

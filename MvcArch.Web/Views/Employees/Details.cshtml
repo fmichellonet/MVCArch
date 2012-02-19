@@ -1,0 +1,32 @@
+@model MvcArch.Web.Models.Employee
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Employee</legend>
+
+    <div class="display-label">FirstName</div>
+    <div class="display-field">@Model.FirstName</div>
+
+    <div class="display-label">LastName</div>
+    <div class="display-field">@Model.LastName</div>
+
+    <div class="display-label">FullName</div>
+    <div class="display-field">@Model.FullName</div>
+
+    <div class="display-label">BirthDate</div>
+    <div class="display-field">@String.Format("{0:g}", Model.BirthDate)</div>
+
+    <div class="display-label">Login</div>
+    <div class="display-field">@Model.Login</div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+

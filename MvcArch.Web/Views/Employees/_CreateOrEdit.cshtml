@@ -1,0 +1,44 @@
+@model MvcArch.Web.Models.Employee
+
+@* This partial view defines form fields that will appear when creating and editing entities *@
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.FirstName)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.FirstName)
+    @Html.ValidationMessageFor(model => model.FirstName)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.LastName)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.LastName)
+    @Html.ValidationMessageFor(model => model.LastName)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.FullName)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.FullName)
+    @Html.ValidationMessageFor(model => model.FullName)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.BirthDate)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.BirthDate)
+    @Html.ValidationMessageFor(model => model.BirthDate)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Login)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Login)
+    @Html.ValidationMessageFor(model => model.Login)
+</div>
+

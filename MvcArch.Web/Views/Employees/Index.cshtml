@@ -1,0 +1,59 @@
+@model IEnumerable<MvcArch.Web.Models.Employee>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th></th>
+        <th>
+            FirstName
+        </th>
+        <th>
+            LastName
+        </th>
+        <th>
+            FullName
+        </th>
+        <th>
+            BirthDate
+        </th>
+        <th>
+            Login
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+        <td>
+			@item.FirstName
+        </td>
+        <td>
+			@item.LastName
+        </td>
+        <td>
+			@item.FullName
+        </td>
+        <td>
+			@String.Format("{0:g}", item.BirthDate)
+        </td>
+        <td>
+			@item.Login
+        </td>
+    </tr>
+}
+
+</table>
+
+
